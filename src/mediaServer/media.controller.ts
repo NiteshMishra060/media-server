@@ -246,6 +246,24 @@ export class MediaController {
     };
   }
 
+
+  @Get("/get-all-video")
+ // @UseGuards(HeadAdminGuard)
+  @ApiResponse({ type: responseDto })
+  public async getAllvideos(
+   // @Query("video-search") video: string
+  ): Promise<responseDto> {
+    let response = await this.mediaService.getAllvideos(
+      // video
+    );
+    return {
+      statusCode: 200,
+      message: `success`,
+      error: ``,
+      response: response,
+    };
+  }
+
   @Delete("/delete-video-url")
  // @UseGuards(HeadAdminGuard)
   @ApiResponse({ type: responseDto })
