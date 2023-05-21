@@ -233,10 +233,10 @@ export class MediaController {
  // @UseGuards(HeadAdminGuard)
   @ApiResponse({ type: responseDto })
   public async getPartnerProfileImage(
-    @Query("video-search") video: string
+    @Query("video-id") id: number
   ): Promise<responseDto> {
     let response = await this.mediaService.getvideos(
-      video
+      id
     );
     return {
       statusCode: 200,
