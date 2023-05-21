@@ -52,7 +52,7 @@ export class MediaService extends Base {
           })
           .execute();
       });
-      console.log(result);
+      return result.generatedMaps[0].id;
     } catch (e) {
       return { success: false, message: e.message };
     }
