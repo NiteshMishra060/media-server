@@ -147,13 +147,13 @@ export class MediaService extends Base {
 
   }
   
-  public async getvideos(video: string): Promise<any> {
+  public async getvideos(id: number): Promise<any> {
     try {
       const manager = await this.getDataSourceManager();
       const query = await manager
         .createQueryBuilder(Media, "Media")
         .select()
-        .where("Media.video_name = :video", { video: video })
+        .where("Media.id = :id", { id: id })
         .getOne();
       console.log(query);
       if (query == null || JSON.stringify(query) == "[]")
