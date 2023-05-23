@@ -13,8 +13,8 @@ async function bootstrap() {
   const app = await NestFactory.create<NestExpressApplication>(AppModule);
 
   app.enableCors({
-     origin: process.env.CORS_ORIGINS
-     ? process.env.CORS_ORIGINS.split(','): true,
+    // origin: process.env.CORS_ORIGINS
+    // ? process.env.CORS_ORIGINS.split(','): true,
     methods: ["OPTIONS", "GET", "PUT", "POST", "DELETE", "PATCH"],
     optionsSuccessStatus: 200,
     allowedHeaders: 'Content-Type, Accept', // Allowed headers
