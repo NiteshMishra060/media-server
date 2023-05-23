@@ -18,6 +18,8 @@ async function bootstrap() {
     origin: true,
     methods: ["OPTIONS", "GET", "PUT", "POST", "DELETE", "PATCH"],
     optionsSuccessStatus: 200,
+    allowedHeaders: 'Content-Type, Accept', // Allowed headers
+
   });
   //app.useGlobalPipes(new ValidationPipe());
   // app.useGlobalInterceptors(new TimeoutInterceptor());
