@@ -15,7 +15,7 @@ async function bootstrap() {
   app.enableCors({
     //  origin: process.env.CORS_ORIGINS
     // ? process.env.CORS_ORIGINS.split(',')
-    //  : true,
+    origin: true,
     methods: ["OPTIONS", "GET", "PUT", "POST", "DELETE", "PATCH"],
     optionsSuccessStatus: 200,
   });
